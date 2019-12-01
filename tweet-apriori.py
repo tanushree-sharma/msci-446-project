@@ -14,7 +14,7 @@ for i in range(0, 468):
     records.append([str(tweet_data.values[i, j]) for j in range(0, 9)])
 
 # association rules
-association_rules = apriori(records, min_support=0.00468, min_confidence=0.8, min_lift=1, min_length=3)
+association_rules = apriori(records, min_support=0.001, min_confidence=0.7, min_lift=2, min_length=2)
 association_results = list(association_rules)
 
 # viewing results
